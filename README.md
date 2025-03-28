@@ -78,6 +78,8 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-1
 
+Dalam implementasi BambangShop, sementara pola Observer klasik menyarankan penggunaan antarmuka/ciri untuk `Subscriber` guna memisahkan logika notifikasi, satu struct sudah cukup di sini karena kurangnya beragam jenis pelanggan saat ini—meskipun memperkenalkan ciri `Notifiable` akan membuat desain tahan masa depan untuk ekstensi potensial. Penggunaan `DashMap` diperlukan daripada `Vec` untuk menegakkan keunikan URL dan memungkinkan pencarian/pembaruan O(1) yang efisien, penting untuk operasi yang aman untuk thread dalam lingkungan bersamaan. Pilihan `DashMap` untuk variabel statis `SUBSCRIBERS` selaras dengan jaminan keamanan thread Rust, karena secara inheren menangani sinkronisasi tanpa boilerplate pola Singleton, yang akan memerlukan penguncian manual (misalnya, `Mutex`) dan risiko kemacetan. Pendekatan ini menyeimbangkan Rust idiomatis, kinerja, dan skalabilitas sambil mematuhi prinsip pola desain.
+
 #### Reflection Publisher-2
 
 #### Reflection Publisher-3

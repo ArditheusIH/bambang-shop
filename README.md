@@ -82,6 +82,6 @@ Dalam implementasi BambangShop, sementara pola Observer klasik menyarankan pengg
 
 #### Reflection Publisher-2
 
-
+Dalam pola MVC, pemisahan **Service** (logika bisnis) dan **Repository** (akses data) dari **Model** (struktur data) mematuhi **Single Responsibility Principle**, yang mengurangi penggabungan kode dan meningkatkan kemudahan pemeliharaan—Jika tidak, Model akan menjadi sangat besar dengan penyimpanan dan logika yang bercampur, sehingga mempersulit pengujian dan skalabilitas. Tanpa pemisahan ini, interaksi antara model seperti `Program`, `Subscriber`, dan `Notification` akan melibatkan penanganan data dengan aturan domain, yang menyebabkan kode terduplikasi dan dependensi yang rapuh. Alat seperti **Postman** menyederhanakan pengujian API dengan mengaktifkan validasi titik akhir, alur kerja otomatis (melalui koleksi), dan variabel lingkungan, yang sangat berharga untuk memverifikasi titik akhir (misalnya, `/subscribe` atau `/notify`) dan memastikan perilaku yang konsisten di antara anggota tim, yang secara langsung mendukung pengembangan iteratif dan kolaborasi dalam proyek kelompok.
 
 #### Reflection Publisher-3
